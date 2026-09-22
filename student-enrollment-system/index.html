@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | CITCS Student Enrollment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="landing-body">
+    <div class="landing-container">
+        <div class="landing-card">
+
+            <!-- LOGO (image with emoji fallback) -->
+            <div class="logo-wrap">
+                <img src="images/citcs-logo.png"
+                     alt="CITCS Logo"
+                     class="logo-img"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="logo-fallback" style="display:none;">🎓</div>
+            </div>
+
+            <!-- WELCOME TEXT -->
+            <h1 class="landing-title">Welcome to the</h1>
+            <h2 class="landing-subtitle">Student Enrollment System</h2>
+            <p class="landing-tagline">
+                College of Information Technology and Computer Science
+            </p>
+
+            <div class="landing-divider"></div>
+
+            <p class="landing-desc">
+                Enroll new students quickly and securely. All records are stored locally
+                in your browser and can be reviewed anytime.
+            </p>
+
+            <!-- ENROLL BUTTON -->
+            <a href="enroll.html" class="btn btn-primary btn-large">
+                📝 Enroll Now
+            </a>
+
+            <!-- LINK TO LIST -->
+            <a href="enrollment-list.html" class="btn btn-ghost btn-large">
+                📋 View Enrollment List
+            </a>
+
+
+
+            <!-- FOOTER -->
+            <p class="landing-footer">
+                © 2025 CITCS · Student Enrollment System
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const currentPath = window.location.pathname.replace(/\\/+$|index\\.html$/i, '');
+        if (currentPath === '' || currentPath.endsWith('/student-enrollment-system')) {
+            window.location.replace('./index.html');
+        }
+    </script>
+</body>
+</html>

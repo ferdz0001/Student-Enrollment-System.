@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Student | CITCS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- TOP BAR with Home link -->
+        <div class="top-bar">
+            <a href="index.html" class="btn btn-ghost btn-small">← Home</a>
+            <a href="enrollment-list.html" class="btn btn-secondary btn-small">📋 View List</a>
+        </div>
+
+        <header>
+            <h1>Student Enrollment Form</h1>
+            <p class="subhead">CITCS — College of Information Technology and Computer Science</p>
+        </header>
+
+        <!-- FORM -->
+        <form id="enrollmentForm" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="studentId">Student ID *</label>
+                    <input type="text" id="studentId" placeholder="e.g., 2025-00123">
+                    <div class="error-message" id="errorStudentId"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prefix">Prefix <span class="optional">(optional)</span></label>
+                    <input type="text" id="prefix" placeholder="Mr., Ms., Dr.">
+                    <div class="error-message" id="errorPrefix"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" id="firstName" placeholder="Juan">
+                    <div class="error-message" id="errorFirstName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="middleName">Middle Name <span class="optional">(optional)</span></label>
+                    <input type="text" id="middleName" placeholder="Dela Cruz">
+                    <div class="error-message" id="errorMiddleName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" id="lastName" placeholder="Santos">
+                    <div class="error-message" id="errorLastName"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="suffix">Suffix <span class="optional">(optional)</span></label>
+                    <input type="text" id="suffix" placeholder="Jr., Sr., III">
+                    <div class="error-message" id="errorSuffix"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="juan.santos@email.com">
+                    <div class="error-message" id="errorEmail"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Course *</label>
+                    <select id="course">
+                        <option value="">-- Select Course --</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BSCS">BSCS</option>
+                        <option value="BMMA">BMMA</option>
+                        <option value="BSAIS">BSAIS</option>
+                    </select>
+                    <div class="error-message" id="errorCourse"></div>
+                </div>
+
+                <div class="form-group" id="majorGroup">
+                    <label for="major">Major (BSIT only) *</label>
+                    <select id="major">
+                        <option value="">-- Select Major --</option>
+                        <option value="Net Sec">Net Sec</option>
+                        <option value="Web Tech">Web Tech</option>
+                        <option value="ERP">ERP</option>
+                    </select>
+                    <div class="error-message" id="errorMajor"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearLevel">Year Level *</label>
+                    <select id="yearLevel">
+                        <option value="">-- Select Year --</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                    </select>
+                    <div class="error-message" id="errorYearLevel"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Enroll Student</button>
+        </form>
+    </div>
+
+    <!-- ✅ SUCCESS MODAL -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-icon">✅</div>
+            <h2 class="modal-title">Enrollment Successful!</h2>
+            <p class="modal-message" id="modalMessage">
+                The student has been enrolled successfully.
+            </p>
+
+            <div class="modal-actions">
+                <!-- Small view icon/button -->
+                <button id="viewBtn" class="btn btn-primary btn-icon-row">
+                    <span class="btn-icon">👁️</span>
+                    <span>View Enrollment List</span>
+                </button>
+                <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

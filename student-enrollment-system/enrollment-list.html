@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment List | CITCS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- TOP BAR -->
+        <div class="top-bar">
+            <a href="index.html" class="btn btn-ghost btn-small">← Home</a>
+            <button id="clearListBtn" class="btn btn-danger btn-small">🗑️ Clear All</button>
+        </div>
+
+        <header>
+            <h1>Enrollment List</h1>
+            <p class="subhead">CITCS — College of Information Technology and Computer Science</p>
+        </header>
+
+        <!-- STATS -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-value" id="totalCount">0</div>
+                <div class="stat-label">Total Enrolled</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="bsitCount">0</div>
+                <div class="stat-label">BSIT</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="otherCount">0</div>
+                <div class="stat-label">Other Courses</div>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+        <section class="records-section">
+            <div class="table-wrapper">
+                <table id="recordsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Student ID</th>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Major</th>
+                            <th>Year Level</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody">
+                        <tr class="empty-row">
+                            <td colspan="7">No students enrolled yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- BOTTOM BACK TO HOME -->
+        <div class="bottom-actions">
+            <a href="index.html" class="btn btn-primary btn-large">🏠 Back to Home</a>
+        </div>
+    </div>
+
+    <script src="list.js"></script>
+</body>
+</html>
